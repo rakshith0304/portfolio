@@ -1,17 +1,4 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
-
+/* Tablet / medium screens */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -19,85 +6,129 @@
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
+
   section {
-    margin: 0 5%;
+    padding: 3rem 5%;
   }
+
+  #profile {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
   .section__pic-container {
-    width: 275px;
-    height: 275px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  #about .section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .section__pic-container {
+    width: 250px;
+    height: 250px;
     margin: 0 auto 2rem;
   }
+
   .about-containers {
-    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
+  .work-header {
+    flex-direction: column;
+  }
+
+  .work-date {
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+/* Mobile */
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  section {
+    padding: 2.5rem 1.25rem;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+
+  .title {
+    font-size: 2rem;
   }
-  article {
-    font-size: 1rem;
+
+  .section__text__p2 {
+    font-size: 1.15rem;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
+
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
+
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  #profile {
+    padding-top: 2rem;
+  }
+
   .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+    width: 200px;
+    height: 200px;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
+
+  #about .section__pic-container {
+    width: 200px;
+    height: 200px;
   }
-  .title {
-    font-size: 2rem;
+
+  .about-containers {
+    flex-direction: column;
   }
-  .text-container {
-    text-align: justify;
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-role {
+    font-size: 1.1rem;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  footer .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }
